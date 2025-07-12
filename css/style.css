@@ -6,7 +6,7 @@
   --transition:all 0.3s ease-in-out;
 }
 /* End Variables */
-/* Start Global Rules */
+/* !Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -48,7 +48,7 @@ ul {
     width: 1170px;
   }
 }
-/* End Global Rules */
+/* !End Global Rules */
 /* Start Components */
 
 /* End Components */
