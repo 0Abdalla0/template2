@@ -7,7 +7,7 @@
   --transparent-color:rgb(15 116 143 / 70%);
 }
 /* End Variables */
-/* Start Global Rules */
+/* !Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -49,7 +49,7 @@ ul {
     width: 1170px;
   }
 }
-/* End Global Rules */
+/* !End Global Rules */
 /* Start Components */
 
 /* End Components */
