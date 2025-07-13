@@ -20,7 +20,6 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: black;
 }
 ul {
   list-style: none;
@@ -50,9 +49,51 @@ ul {
   }
 }
 /* !End Global Rules */
-/* Start Components */
+/* *Start Components */
+  .main-heading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-heading h2 {
+    font-size: 40px;
+    font-weight: normal;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+  }
+  .main-heading h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: #333;
+    bottom: -30px;
+    width: 120px;
+  }
+  .main-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 14px;
+    width: 14px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background-color: white;
+    bottom: -38px;
+  }
+  .main-heading p {
+    width: 550px;
+    margin: 0 100px;
+    font-size: 14px;
+    max-width: 100%;
+    color: #333;
+  }
 
-/* End Components */
+/* *End Components */
 /* Start Header */
 header {
   position: absolute;
@@ -236,3 +277,4 @@ header nav .form i {
   border-color: var(--main-color);
 }
 /* End Landing */
+/* Start main-heading */
