@@ -349,6 +349,8 @@ header nav .form i {
 }
 .design .image img{
   position: relative;
+  width: 100%;
+  height: auto;
   bottom: -150px;
 }
 .design .text{
@@ -365,6 +367,232 @@ header nav .form i {
   padding: 15px 0;
 }
 .design .text ul li::before{
-  
+  font-family: 'Font Awesome 5 Free';
+  content: "\f0ac";
+  font-weight: 900;
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .design {
+    height: auto;
+    flex-direction: column;
+  }
+  .design .image img {
+    width: 100%;
+    bottom: 0;
+  }
+  .design .text {
+    padding: 20px;
+  }
 }
 /* End Design */
+/* Start Portfolio */
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+}
+.portfolio .shuffle li {
+  padding: 10px;
+}
+.portfolio .shuffle li.active {
+  background-color: var(--main-color);
+  color: white;
+}
+.portfolio .images-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.portfolio .images-container .box {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio .images-container .box:hover .caption {
+  bottom: 0;
+}
+.portfolio .images-container .box:hover img {
+  transform: rotate(3.3deg) scale(1.1);
+}
+@media (max-width: 767px) {
+  .portfolio .images-container .box {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .portfolio .images-container .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1199px) {
+  .portfolio .images-container .box {
+    flex-basis: 25%;
+  }
+}
+.portfolio .images-container img {
+  max-width: 100%;
+  width: 100%;
+  height: 400px;
+  border-radius: 5px;
+  transition: var(--transition);
+}
+.portfolio .images-container .box .caption{
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  transition: var(--transition);
+  bottom: -100%;
+}
+.portfolio .images-container .box .caption h4{
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.portfolio .images-container .box .caption p{
+  color: var(--main-color);
+}
+.portfolio .more{
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* End Portfolio */
+/* Start Video */
+.video {
+  position: relative;
+}
+.video::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 40%);
+}
+.video video{
+  width: 100%;
+}
+.video .text{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  text-align: center;
+  color: white;
+  background-color: var(--transparent-color);
+}
+.video .text h2 {
+  margin: 0 0 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.video .text p {
+  font-size: 14px;
+  color: var(--pColor);
+  margin-bottom: 20px;
+}
+.video .text button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; ;
+  cursor: pointer;
+  transition: var(--transition);
+}
+/* End Video */
+/* Start About */
+.about {
+  padding-top: var(--section-padding);
+  overflow: hidden;
+}
+.about img {
+  position: relative;
+  bottom: -120px;
+  height: 500px;
+  margin-top:-120px ;
+  width: 100%;
+  max-width: 100%
+}
+/* End About */
+/* Start Stat */
+.stat {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  text-align: center;
+  background-image: url("../images/stat.jpg");
+  background-size: cover;
+  position: relative;
+}
+.stat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.stat .container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.stat .box {
+  padding: 50px;
+  color: white;
+  background-color: var(--transparent-color);
+  border-bottom: 3px solid black;
+}
+
+@media(max-width:767px){
+  .stat .box{
+    flex-basis: 100%;
+  }
+  .stat .box:not(:last-child)
+  {
+    margin-bottom: 20px;
+    border-bottom: -3px solid black;
+  }
+}
+@media (min-width: 768px) {
+  .stat .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 991px) {
+  .stat .box {
+    flex-basis: 25%;
+  }
+}
+.stat .box i{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+}
+.stat .box .number{
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+.stat .box p{
+  font-size: 14px;
+}
+
+/* End Stat */
