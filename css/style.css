@@ -15,6 +15,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  transition: var(--transition);
 }
 html {
   scroll-behavior: smooth;
@@ -164,7 +165,7 @@ header nav ul li a {
   display: block;
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 24px;
   transition: 0.3s;
   position: relative;
   z-index: 2;
@@ -266,6 +267,7 @@ header nav .form i {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  cursor: pointer;
 }
 .landing .bullets li{
   width: 20px;
@@ -277,6 +279,9 @@ header nav .form i {
 .landing .bullets li.active{
   background-color: var(--main-color);
   border-color: var(--main-color);
+}
+.landing .bullets li:hover{
+  background-color: var(--main-color);
 }
 /* End Landing */
 /* Start services */
@@ -346,17 +351,23 @@ header nav .form i {
 }
 .design .image{
   text-align: center;
+  padding: 10px;
 }
 .design .image img{
   position: relative;
   width: 100%;
-  height: auto;
-  bottom: -150px;
+  height: auto;   
+  margin-top:-50px;
 }
 .design .text{
   color: white;
   padding: 50px;
   background-color: var(--transparent-color);
+    z-index: 2;
+    position: relative;
+    flex: 1;
+    height: 100%;
+    font-size: 17px;
 }
 .design .text h2{
   font-weight: normal;
@@ -397,8 +408,15 @@ header nav .form i {
 }
 .portfolio .shuffle li {
   padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .portfolio .shuffle li.active {
+  background-color: var(--main-color);
+  color: white;
+}
+.portfolio .shuffle li:hover{
   background-color: var(--main-color);
   color: white;
 }
@@ -410,6 +428,8 @@ header nav .form i {
 .portfolio .images-container .box {
   position: relative;
   overflow: hidden;
+  transform: scale(0.99);
+  border-radius: 5px;
 }
 .portfolio .images-container .box:hover .caption {
   bottom: 0;
@@ -658,6 +678,7 @@ header nav .form i {
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 
 .testimonials .bullets li{
@@ -670,6 +691,9 @@ header nav .form i {
 .testimonials .bullets li.active{
   background-color: var(--main-color);
   border-color: var(--main-color);
+}
+.testimonials .bullets li:hover{
+  background-color: var(--main-color);
 }
 .skills .prog-holder{
   margin-bottom: 20px;
@@ -873,7 +897,8 @@ header nav .form i {
   background: none;
   padding: 20px 20px 20px 60px;
   caret-color: var(--main-color);
-  width: calc(100%-130px);
+  width: 100%;
+  max-width: 100%;
   color: white;
 
 }
