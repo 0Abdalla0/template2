@@ -897,8 +897,7 @@ header nav .form i {
   background: none;
   padding: 20px 20px 20px 60px;
   caret-color: var(--main-color);
-  width: 100%;
-  max-width: 100%;
+  width: calc(100%-130px);
   color: white;
 
 }
