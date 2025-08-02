@@ -192,26 +192,25 @@ header nav .form i {
 /* start Landing */
 .landing {
   min-height: 100vh;
+  background-color: #1f2021;
   background-image: url("../images/landing.jpg");
-  background-color: #416b95 ;
   background-size: cover;
-  background-position: center;
   position: relative;
 }
 .landing .overlay {
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(0 0 0 / 60%);
 }
-.landing .text{
+.landing .text {
   position: absolute;
-  top: 50%;
   left: 0;
-  width: 50%;
+  top: 50%;
   transform: translateY(-50%);
+  width: 50%;
   padding: 50px;
   background-color: var(--transparent-color);
   color: white;
@@ -223,20 +222,19 @@ header nav .form i {
 }
 @media (max-width: 767px) {
   .landing .text {
-    width: 100%;    
+    width: 100%;
   }
   .landing .text .content {
     max-width: 100%;
-    text-align: center;
   }
 }
-.landing .text h2 {
+.landing .text .content h2 {
   font-size: 32px;
   font-weight: normal;
-  margin-bottom: 30px;
   line-height: 1.5;
+  margin-bottom: 20px;
 }
-.landing .text p {
+.landing .text .content p {
   font-size: 14px;
   line-height: 2;
 }
@@ -246,40 +244,34 @@ header nav .form i {
   transform: translateY(-50%);
   color: #ddd;
 }
-
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .landing .change-background {
     display: none;
   }
 }
-
-.landing .fa-angle-left{
+.landing .fa-angle-left {
   left: 30px;
 }
-.landing .fa-angle-right{
+.landing .fa-angle-right {
   right: 30px;
 }
-.landing .bullets{
+.landing .bullets {
   position: absolute;
-  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
+  bottom: 30px;
   display: flex;
-  cursor: pointer;
 }
-.landing .bullets li{
+.landing .bullets li {
   width: 20px;
   height: 20px;
   border: 1px solid white;
-  border-radius: 50%; 
+  border-radius: 50%;
   margin-right: 10px;
 }
-.landing .bullets li.active{
+.landing .bullets li.active {
   background-color: var(--main-color);
   border-color: var(--main-color);
-}
-.landing .bullets li:hover{
-  background-color: var(--main-color);
 }
 /* End Landing */
 /* Start services */
